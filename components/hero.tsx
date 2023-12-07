@@ -1,5 +1,7 @@
 import VideoThumb from '@/public/images/astros.webp'
-import ModalVideo from '@/components/modal-video'
+import Image from 'next/image'
+
+import workflow from '@/public/images/workflow.png'
 
 export default function Hero() {
   return (
@@ -15,10 +17,7 @@ export default function Hero() {
               <stop stopColor="#DFDFDF" offset="100%" />
             </linearGradient>
           </defs>
-          <g fill={VideoThumb} fillRule="evenodd">
-            <circle cx="1232" cy="128" r="128" />
-            <circle cx="155" cy="443" r="64" />
-          </g>
+          
         </svg>
       </div>
 
@@ -31,27 +30,27 @@ export default function Hero() {
           <div className="text-center pb-12 md:pb-16">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Densidad en imagenes <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">astronomicas</span></h1>
             <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Clasificador de imágenes según su densidad. Al usar este sistema de clasificación al poder medir la densidad de una imagen se puede sacar una idea de que existe en ella.</p>
-              <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
-                <div>
-                  <a className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Mas informacion</a>
-                </div>
-                <div>
-                  <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Proyecto</a>
-                </div>
-              </div>
+              <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Clasificador de imágenes astronomicas. El fin de este software es mediante una base de datos astronomica, poder clasificar los elementos encontrados dentro de esta. Para ello se siguio el siguiente WorkFlow.</p>
             </div>
           </div>
-
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+            <h2 className="h2 mb-4">Motivación</h2>
+            <p className="text-xl text-gray-600" data-aos="zoom-y-out">Actualmente las formas de obtención de imagenes y data astronomica van en aumento
+            por lo que muchas veces las formas convencionales de analisis van siendo cada vez mas obsoletas, costando mayor computo y tiempo.</p>
+          </div>
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+            <h2 className="h2 mb-4">Solución planteada</h2>
+            <p className="text-xl text-gray-600" data-aos="zoom-y-out">Para poder llevar a cabo este problema, se decidio crear un software el cual
+            pudiese data astronomica, analizarla y poder descubrir que existe dentro de dicha data, facilitando el estudio y analisis del universo. Pero
+            ¿Como se planea llevar a cabo esta solución?
+            </p>
+          </div>
           {/* Hero image */}
-          <ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={768}
-            thumbHeight={432}
-            thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
-            videoWidth={1920}
-            videoHeight={1080} />
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+            <h1 className="h2 mb-4">WORKFLOW</h1>
+            <Image  src={workflow} width={600} height={600} alt='workflow' style={{marginLeft:'10%'}} />
+          </div>
+          
 
         </div>
 
